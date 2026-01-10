@@ -124,12 +124,34 @@
 
             <!-- 目標リスト -->
             <section id="list-section">
-                <h2 style="color: var(--text-main); margin-bottom: 1rem; font-size: 1.5rem;">登録済みリスト</h2>
+                <div class="list-header">
+                    <h2 style="color: var(--text-main); font-size: 1.5rem;">登録済みリスト</h2>
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="active">進行中</button>
+                        <button class="filter-btn" data-filter="completed">完了済み</button>
+                    </div>
+                </div>
                 <div id="goal-list">
                     <!-- ここにJavaScriptで目標が追加されます -->
                     <div class="empty-state">
                         まだ目標がありません。<br>新しい目標を立ててスタートしましょう！
                     </div>
+                </div>
+            </section>
+
+            <!-- データ管理セクション -->
+            <section class="card" id="data-management">
+                <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">💾 データのバックアップ・移行</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                    PCからスマホへのデータ移行や、バックアップに使います。
+                </p>
+                <div class="action-buttons">
+                    <button id="export-btn" class="btn btn-outline">
+                        データを書き出す (コピー)
+                    </button>
+                    <button id="import-btn" class="btn btn-outline">
+                        データを読み込む (入力欄を開く)
+                    </button>
                 </div>
             </section>
         </main>

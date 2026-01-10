@@ -69,6 +69,7 @@ header h1 {
     color: var(--text-main);
     background: linear-gradient(to right, var(--primary-color), #818cf8);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: var(--spacing-xs);
 }
@@ -360,4 +361,61 @@ textarea.form-control {
         width: 100%;
         /* Ensure buttons are full width on mobile */
     }
+}
+
+/* List Header & Filters */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-group {
+    display: flex;
+    background-color: #e2e8f0;
+    padding: 0.25rem;
+    border-radius: var(--radius-md);
+}
+
+.filter-btn {
+    border: none;
+    background: none;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: calc(var(--radius-md) - 2px);
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Data Management Actions */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+    flex: 1;
+}
+
+/* Completed Goal Style */
+.card.completed {
+    opacity: 0.7;
+    background-color: #f1f5f9;
+}
+
+.card.completed .goal-title {
+    text-decoration: line-through;
+    color: var(--text-muted);
 }
