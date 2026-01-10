@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Keeper - 目標管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Goal Keeper</h1>
+            <p>半期の目標を鮮やかに管理しよう</p>
+        </header>
+
+        <main>
+            <!-- 目標入力フォーム -->
+            <section class="card" id="input-section">
+                <div class="input-group">
+                    <label for="goal-title">目標タイトル</label>
+                    <input type="text" id="goal-title" class="form-control" placeholder="例：基本情報技術者試験に合格する">
+                </div>
+
+                <div class="input-group">
+                    <label for="goal-period">対象期間</label>
+                    <select id="goal-period" class="form-control">
+                        <option value="2030-h2">2030年 下期 (10月-3月)</option>
+                        <option value="2030-h1">2030年 上期 (4月-9月)</option>
+                        <option value="2029-h2">2029年 下期 (10月-3月)</option>
+                        <option value="2029-h1">2029年 上期 (4月-9月)</option>
+                        <option value="2028-h2">2028年 下期 (10月-3月)</option>
+                        <option value="2028-h1">2028年 上期 (4月-9月)</option>
+                        <option value="2027-h2">2027年 下期 (10月-3月)</option>
+                        <option value="2027-h1">2027年 上期 (4月-9月)</option>
+                        <option value="2026-h2">2026年 下期 (10月-3月)</option>
+                        <option value="2026-h1">2026年 上期 (4月-9月)</option>
+                        <option value="2025-h2">2025年 下期 (10月-3月)</option>
+                        <option value="2025-h1">2025年 上期 (4月-9月)</option>
+                        <option value="2024-h2">2024年 下期 (10月-3月)</option>
+                        <option value="2024-h1">2024年 上期 (4月-9月)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="goal-desc">詳細・アクションプラン</label>
+                    <textarea id="goal-desc" class="form-control" placeholder="具体的な行動計画を入力..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="goal-analysis">フィールド分析</label>
+                    <div class="analysis-guide">
+                        <p>💡 以下の視点で自分の「フィールド」を定義してみましょう：</p>
+                        <ul>
+                            <li>自分が評価を受けたい場所はどこか？</li>
+                            <li>どのようなコミュニティや組織に属しているか？</li>
+                            <li>どのようなグループの中で活躍したいか？</li>
+                            <li>認められたい組織は何か？</li>
+                        </ul>
+                    </div>
+                    <textarea id="goal-analysis" class="form-control" placeholder="上記の質問への回答や、分析内容をここに入力..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="goal-judges">審査員（キーマン）</label>
+                    <div class="analysis-guide">
+                        <p>💡 評価者は誰ですか？</p>
+                        <ul>
+                            <li>直属の上司？ 部長？</li>
+                            <li>クライアント？ 同僚？</li>
+                            <li>その人の名前や役職を特定しましょう。</li>
+                        </ul>
+                    </div>
+                    <input type="text" id="goal-judges" class="form-control" placeholder="例：〇〇部長、プロジェクトマネージャーAさん">
+                </div>
+
+                <div class="input-group">
+                    <label for="goal-victory">勝利条件（評価の基準）</label>
+                    <div class="analysis-guide">
+                        <p>💡 どうすれば評価されますか？</p>
+                        <ul>
+                            <li>具体的な成果物は？</li>
+                            <li>期待されている行動や貢献は？</li>
+                            <li>「これをやれば勝ち」という状態を定義しましょう。</li>
+                        </ul>
+                    </div>
+                    <textarea id="goal-victory" class="form-control"
+                        placeholder="例：期日までに〇〇システムをリリースし、バグ報告を0件にする。チームの雰囲気を良くする。"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="goal-innovation">新しいアプローチ（創意工夫）</label>
+                    <div class="analysis-guide">
+                        <p>💡 どのように新しい方法を使いますか？</p>
+                        <ul>
+                            <li>今までと違うやり方を取り入れるなら？</li>
+                            <li>新しいツールや技術を活用する？</li>
+                            <li>「あなたならでは」の独自の工夫は？</li>
+                        </ul>
+                    </div>
+                    <textarea id="goal-innovation" class="form-control"
+                        placeholder="例：AIツールを活用して作業時間を短縮する。他部署のフレームワークを導入してみる。"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="goal-appeal">アピール戦略（見せ方）</label>
+                    <div class="analysis-guide">
+                        <p>💡 その才能をどうアピールしますか？</p>
+                        <ul>
+                            <li>成果を誰に、どのタイミングで報告する？</li>
+                            <li>プレゼンやデモの機会を作る？</li>
+                            <li>数字やグラフで可視化する？</li>
+                        </ul>
+                    </div>
+                    <textarea id="goal-appeal" class="form-control"
+                        placeholder="例：定例会議で毎週進捗をグラフで共有する。完成発表会を企画する。"></textarea>
+                </div>
+
+                <button id="add-btn" class="btn btn-primary">
+                    目標を追加する
+                </button>
+            </section>
+
+            <!-- 目標リスト -->
+            <section id="list-section">
+                <h2 style="color: var(--text-main); margin-bottom: 1rem; font-size: 1.5rem;">登録済みリスト</h2>
+                <div id="goal-list">
+                    <!-- ここにJavaScriptで目標が追加されます -->
+                    <div class="empty-state">
+                        まだ目標がありません。<br>新しい目標を立ててスタートしましょう！
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
